@@ -24,7 +24,6 @@ p6df::modules::darwin::external::brew() {
   brew install ag
   brew install bat
   brew install exa
-  brew install fasd
   brew install fd
   brew install rg
 }
