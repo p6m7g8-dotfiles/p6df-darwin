@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 ######################################################################
 #<
 #
@@ -6,7 +7,7 @@
 #>
 ######################################################################
 p6df::modules::darwin::deps() { 
-	ModuleDeps=(
+  ModuleDeps=(
     p6m7g8-dotfiles/p6common
   )
 }
@@ -26,6 +27,8 @@ p6df::modules::darwin::external::brew() {
   brew install exa
   brew install fd
   brew install rg
+
+  p6_return_void
 }
 
 ######################################################################
@@ -38,6 +41,8 @@ p6df::modules::darwin::external::brew() {
 p6df::modules::darwin::langs() {
 
   xcode-select --install
+
+  p6_return_void
 }
 
 ######################################################################
@@ -45,6 +50,7 @@ p6df::modules::darwin::langs() {
 #
 # Function: p6df::modules::darwin::init()
 #
+#  Environment:	 DS_S
 #>
 ######################################################################
 p6df::modules::darwin::init() {
@@ -74,4 +80,6 @@ p6df::modules::darwin::init() {
     alias lrrrr='exa --long --all --header --classify --group --color-scale --ignore-glob=".git|.DS_Store|node_modules" --git-ignore --tree --level=5'
 
     alias c='bat --paging=never'
+
+    p6_return_void
 } 
