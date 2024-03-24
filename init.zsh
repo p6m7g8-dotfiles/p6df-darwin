@@ -21,11 +21,11 @@ p6df::modules::darwin::deps() {
 ######################################################################
 p6df::modules::darwin::external::brew() {
 
-  brew install ack
-  brew install ag
-  brew install bat
-  brew install fd
-  brew install rg
+  p6df::modules::homebrew::cli::brew::install ack
+  p6df::modules::homebrew::cli::brew::install ag
+  p6df::modules::homebrew::cli::brew::install bat
+  p6df::modules::homebrew::cli::brew::install fd
+  p6df::modules::homebrew::cli::brew::install rg
 
   p6_return_void
 }
@@ -47,16 +47,23 @@ p6df::modules::darwin::langs() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::darwin::init()
+# Function: p6df::modules::darwin::init(_module, dir)
 #
-#  Environment:	 FGT
+#  Args:
+#	_module -
+#	dir -
+#
+#  Environment:	 TCP
 #>
 ######################################################################
 p6df::modules::darwin::init() {
+  local _module="$1"
+  local dir="$2"
 
-  alias ll='ls -alFGTo'
+  p6_alias "c" "bat --paging=never"
 
-  alias c='bat --paging=never'
+  p6_alias "flushdns" "sudo dscacheutil -flushcache"
+  p6_alias "whotunes" "lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689"
 
   p6_return_void
 }

@@ -10,8 +10,7 @@
   - [Summary](#summary)
   - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
-  - [Changes](#changes)
-    - [Usage](#usage)
+  - [Usage](#usage)
   - [Author](#author)
 
 ### Badges
@@ -34,11 +33,16 @@
 
 - [Code of Conduct](https://github.com/p6m7g8/.github/blob/master/CODE_OF_CONDUCT.md)
 
-## Changes
-
-- [Change Log](CHANGELOG.md)
-
 ## Usage
+
+
+### Aliases
+
+- c -> bat --paging=never
+- flushdns -> sudo dscacheutil -flushcache
+- whotunes -> lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689
+
+### Functions
 
 ### p6df-darwin:
 
@@ -46,7 +50,7 @@
 
 - p6df::modules::darwin::deps()
 - p6df::modules::darwin::external::brew()
-- p6df::modules::darwin::init()
+- p6df::modules::darwin::init(_module, dir)
 - p6df::modules::darwin::langs()
 
 
