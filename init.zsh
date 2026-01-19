@@ -61,7 +61,7 @@ p6df::modules::darwin::init() {
   p6_alias "c" "bat --paging=never"
 
   p6_alias "flushdns" "sudo dscacheutil -flushcache"
-  p6_alias "whotunes" "lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689"
+  p6_alias "whotunes" "lsof -r 2 -n -P -F n -c iTunes -a -i TCP@$(hostname):3689"
 
   p6_return_void
 }
