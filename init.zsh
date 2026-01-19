@@ -51,7 +51,6 @@ p6df::modules::darwin::langs() {
 #	_module -
 #	dir -
 #
-#  Environment:	 TCP
 #>
 ######################################################################
 p6df::modules::darwin::init() {
