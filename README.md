@@ -23,6 +23,7 @@
 - c IS bat --paging=never
 - flushdns IS sudo dscacheutil -flushcache
 - whotunes IS lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689
+
 ### Functions
 
 ## p6df-darwin
