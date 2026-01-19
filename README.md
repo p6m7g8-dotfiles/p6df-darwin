@@ -5,8 +5,6 @@
 ## Badges
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Mergify](https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges//p6df-darwin/&style=flat)](https://mergify.io)
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](<https://gitpod.io/#https://github.com//p6df-darwin>)
 
 ## Summary
 
@@ -25,6 +23,7 @@
 - c IS bat --paging=never
 - flushdns IS sudo dscacheutil -flushcache
 - whotunes IS lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689
+
 ### Functions
 
 ## p6df-darwin
