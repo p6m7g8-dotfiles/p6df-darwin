@@ -19,11 +19,11 @@ p6df::modules::darwin::deps() {
 ######################################################################
 p6df::modules::darwin::external::brew() {
 
-  p6df::modules::homebrew::cli::brew::install ack
-  p6df::modules::homebrew::cli::brew::install ag
-  p6df::modules::homebrew::cli::brew::install bat
-  p6df::modules::homebrew::cli::brew::install fd
-  p6df::modules::homebrew::cli::brew::install rg
+  p6df::core::homebrew::cli::brew::install ack
+  p6df::core::homebrew::cli::brew::install ag
+  p6df::core::homebrew::cli::brew::install bat
+  p6df::core::homebrew::cli::brew::install fd
+  p6df::core::homebrew::cli::brew::install rg
 
   p6_return_void
 }
