@@ -45,6 +45,9 @@ TODO: Add a short summary of this module.
 - `p6df::modules::darwin::deps()`
 - `p6df::modules::darwin::external::brew()`
 - `p6df::modules::darwin::init(_module, dir)`
+  - Args:
+    - _module - 
+    - dir - 
 - `p6df::modules::darwin::langs()`
 
 ## Hierarchy
