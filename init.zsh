@@ -25,7 +25,7 @@ p6df::modules::darwin::deps() {
 p6df::modules::darwin::url::open() {
   local url="$1" # URL to open
 
-  if command -v open >/dev/null 2>&1; then
+  if p6_cmd_exists "open"; then
     open "$url"
   else
     xdg-open "$url"
