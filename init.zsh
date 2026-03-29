@@ -37,11 +37,11 @@ p6df::modules::darwin::url::open() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::darwin::external::brew()
+# Function: p6df::modules::darwin::external::brews()
 #
 #>
 ######################################################################
-p6df::modules::darwin::external::brew() {
+p6df::modules::darwin::external::brews() {
 
   p6df::core::homebrew::cli::brew::install ack
   p6df::core::homebrew::cli::brew::install ag
