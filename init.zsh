@@ -7,7 +7,7 @@
 #>
 ######################################################################
 p6df::modules::darwin::deps() {
-  ModuleDeps=()
+  ModuleDeps=(p6m7g8-dotfiles/p6common)
 }
 
 ######################################################################
@@ -15,12 +15,13 @@ p6df::modules::darwin::deps() {
 #
 # Function: p6df::modules::darwin::url::open(url)
 #
+#  Args:
+#	url - URL to open
+#
+#>
 #/ Synopsis
 #/    Open a URL in the default browser, cross-platform.
 #/
-#  Args:
-#	url - URL to open
-#>
 ######################################################################
 p6df::modules::darwin::url::open() {
   local url="$1" # URL to open
@@ -69,7 +70,7 @@ p6df::modules::darwin::langs() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::darwin::init(_module, dir)
+# Function: p6df::modules::darwin::aliases::init(_module, dir)
 #
 #  Args:
 #	_module -
@@ -77,7 +78,7 @@ p6df::modules::darwin::langs() {
 #
 #>
 ######################################################################
-p6df::modules::darwin::init() {
+p6df::modules::darwin::aliases::init() {
   local _module="$1"
   local dir="$2"
 
