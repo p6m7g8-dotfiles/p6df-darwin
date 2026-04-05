@@ -1,9 +1,25 @@
 # shellcheck shell=bash
 ######################################################################
+#<
+#
+# Function: p6df::modules::darwin::deps()
+#
+#>
+######################################################################
 p6df::modules::darwin::deps() {
   ModuleDeps=(p6m7g8-dotfiles/p6common)
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::darwin::aliases::init(_module, dir)
+#
+#  Args:
+#	_module -
+#	dir -
+#
+#>
 ######################################################################
 p6df::modules::darwin::aliases::init() {
   local _module="$1"
@@ -17,6 +33,12 @@ p6df::modules::darwin::aliases::init() {
   p6_return_void
 }
 ######################################################################
+#<
+#
+# Function: p6df::modules::darwin::external::brews()
+#
+#>
+######################################################################
 p6df::modules::darwin::external::brews() {
 
   p6df::core::homebrew::cli::brew::install ack
@@ -29,6 +51,12 @@ p6df::modules::darwin::external::brews() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::darwin::langs()
+#
+#>
+######################################################################
 p6df::modules::darwin::langs() {
 
   xcode-select --install
@@ -36,12 +64,6 @@ p6df::modules::darwin::langs() {
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::darwin::deps()
-#
-#>
 ######################################################################
 #<
 #
@@ -67,25 +89,3 @@ p6df::modules::darwin::url::open() {
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::darwin::external::brews()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::darwin::langs()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::darwin::aliases::init(_module, dir)
-#
-#  Args:
-#	_module -
-#	dir -
-#
-#>
