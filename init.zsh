@@ -13,28 +13,25 @@ p6df::modules::darwin::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::darwin::url::open(url)
+# Function: p6df::modules::darwin::aliases::init(_module, dir)
 #
 #  Args:
-#	url - URL to open
+#	_module -
+#	dir -
 #
 #>
-#/ Synopsis
-#/    Open a URL in the default browser, cross-platform.
-#/
 ######################################################################
-p6df::modules::darwin::url::open() {
-  local url="$1" # URL to open
+p6df::modules::darwin::aliases::init() {
+  local _module="$1"
+  local dir="$2"
 
-  if p6_cmd_exists "open"; then
-    open "$url"
-  else
-    xdg-open "$url"
-  fi
+  p6_alias "c" "bat --paging=never"
+
+  p6_alias "flushdns" "sudo dscacheutil -flushcache"
+  p6_alias "whotunes" "lsof -r 2 -n -P -F n -c iTunes -a -i TCP@$(hostname):3689"
 
   p6_return_void
 }
-
 ######################################################################
 #<
 #
@@ -70,22 +67,25 @@ p6df::modules::darwin::langs() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::darwin::aliases::init(_module, dir)
+# Function: p6df::modules::darwin::url::open(url)
 #
 #  Args:
-#	_module -
-#	dir -
+#	url - URL to open
 #
 #>
+#/ Synopsis
+#/    Open a URL in the default browser, cross-platform.
+#/
 ######################################################################
-p6df::modules::darwin::aliases::init() {
-  local _module="$1"
-  local dir="$2"
+p6df::modules::darwin::url::open() {
+  local url="$1" # URL to open
 
-  p6_alias "c" "bat --paging=never"
-
-  p6_alias "flushdns" "sudo dscacheutil -flushcache"
-  p6_alias "whotunes" "lsof -r 2 -n -P -F n -c iTunes -a -i TCP@$(hostname):3689"
+  if p6_cmd_exists "open"; then
+    open "$url"
+  else
+    xdg-open "$url"
+  fi
 
   p6_return_void
 }
+
