@@ -42,22 +42,33 @@ TODO: Add a short summary of this module.
 
 ##### p6df-darwin/init.zsh
 
-- `p6df::modules::darwin::deps()`
-- `p6df::modules::darwin::external::brew()`
-- `p6df::modules::darwin::init(_module, dir)`
+- `p6df::modules::darwin::aliases::init(_module, dir)`
   - Args:
-    - _module -
-    - dir -
+    - _module
+    - dir
+- `p6df::modules::darwin::deps()`
+- `p6df::modules::darwin::external::brews()`
 - `p6df::modules::darwin::langs()`
+
+#### p6df-darwin/lib
+
+##### p6df-darwin/lib/url.zsh
+
+- `p6df::modules::darwin::url::open(url)`
+  - Synopsis: Open a URL in the default browser, cross-platform.
+  - Args:
+    - url - URL to open
 
 ## Hierarchy
 
 ```text
 .
 ├── init.zsh
+├── lib
+│   └── url.zsh
 └── README.md
 
-1 directory, 2 files
+2 directories, 3 files
 ```
 
 ## Author
